@@ -23,7 +23,7 @@ Dev Notes:
          FATAL:  role "jsblog" does not exist 
          
          The fix
-            /config/database.yml, change username: bloginator to username: action for dev and test
+            /config/database.yml, change username: jsblog to username: action for dev and test
             why does that work?  I forget! I read the postgres docs a while back...
          
          Now when I run rake db:create, I get a message that both _dev and _test already exist,
