@@ -1,0 +1,18 @@
+***
+
+Pending:
+  ArticlesHelper add some examples to (or delete) /home/action/bloginator/spec/helpers/articles_helper_spec.rb
+    # No reason given
+    # ./spec/helpers/articles_helper_spec.rb:14
+  Article add some examples to (or delete) /home/action/bloginator/spec/models/article_spec.rb
+    # No reason given
+    # ./spec/models/article_spec.rb:4
+  Comment add some examples to (or delete) /home/action/bloginator/spec/models/comment_spec.rb
+    # No reason given
+    # ./spec/models/comment_spec.rb:4
+
+Finished in 0.00335 seconds
+3 examples, 0 failures, 3 pending
+
+Randomized with seed 4288
+

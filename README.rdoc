@@ -1,0 +1,40 @@
+== README
+TODO list:
+  * Add authorization to commenting system
+  * Add navi bar
+  * Add a front page with most recent & most viewed articles
+  
+
+Dev Notes:
+  Building the app, from ground up
+
+  - I used Nitrous.io to develop this site, they save you from many environment setup headaches
+  
+  - Database: Postgresql for dev instead of default sqlite3
+         ( gem install pg ) ???
+         parts install postgresql                  # might already be installed
+         parts start postgresql
+         rails new bloginator -d postgresql -T     # adds 'pg' to gemfile, /config/database.yml file, no test files
+         rake db:create                            # create the db
+         
+         I got this error with the above rake command:
+         FATAL:  role "bloginator" does not exist 
+         
+         The fix
+            /config/database.yml, change username: bloginator to username: action for dev and test
+            why does that work?  I forget! I read the postgres docs a while back...
+         
+         Now when I run rake db:create, I get a message that both _dev and _test already exist,
+           so maybe this step wasn't necessary because of the rails -d command??  What about the database.yml file changes though?
+           
+         Now you can run the server and should see the Welcome aboard standard home page.
+
+  - RSpec for tests
+        Pretty straightforward, follow github page instructions at:
+        https://github.com/rspec/rspec-rails
+            ( add gems to GEMFILE, bundle install, rails g rspec:install )
+        Do this before any rails g model, or rails g controller to auto generate spec files,
+        Or you can manually generate specs like rails g rspec:model
+        
+        
+     
