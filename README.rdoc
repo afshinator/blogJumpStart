@@ -1,8 +1,10 @@
 == README
-TODO list:
-  * Add authorization to commenting system
-  * Add navi bar
-  * Add a front page with most recent & most viewed articles
+
+This is a Ruby on Rails Blogging Website, built around a JumpStart Labs Tutorial
+  
+A few differences from the tutorial:
+  - using Postgres for dev envt instead of default sqlite3
+  - using RSpec for tests
   
 
 Dev Notes:
@@ -14,11 +16,11 @@ Dev Notes:
          ( gem install pg ) ???
          parts install postgresql                  # might already be installed
          parts start postgresql
-         rails new bloginator -d postgresql -T     # adds 'pg' to gemfile, /config/database.yml file, no test files
+         rails new jsblog -d postgresql -T     # adds 'pg' to gemfile, /config/database.yml file, no test files
          rake db:create                            # create the db
          
          I got this error with the above rake command:
-         FATAL:  role "bloginator" does not exist 
+         FATAL:  role "jsblog" does not exist 
          
          The fix
             /config/database.yml, change username: bloginator to username: action for dev and test
